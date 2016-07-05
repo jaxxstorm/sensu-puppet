@@ -101,6 +101,7 @@ Puppet::Type.newtype(:sensu_client_config) do
 
     def should_to_s(hash = @should)
       hash.keys.sort.map {|key| "#{key} => #{hash[key]}"}.join(", ")
+      return '[redacted sensitive information]'
     end
 
     def insync?(is)
