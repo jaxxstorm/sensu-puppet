@@ -105,7 +105,7 @@ Puppet::Type.newtype(:sensu_check) do
           false
         end
       else
-        true
+        false
       end
     end
 
